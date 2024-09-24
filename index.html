@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codepen demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--code-pen container starts-->
+    <div class="code-pen container">
+        <input type="radio" id="home" name="tab-group" checked>
+        <label for="home" class="label">Home</label>
+      
+        <input type="radio" id="css" name="tab-group">
+        <label for="css" class="label">Css</label>
+      
+        <input type="radio" id="js" name="tab-group">
+        <label for="js" class="label">Js</label>
+        
+        <!--code-pen content starts-->
+        <div class="code-pen-content">
+            <!--first content-->
+            <div class="content" id="content1">
+                <pre>&lt;div class="tab-container"&gt;
+    &lt;input type="radio" id="tab1" name="tab-group" checked&gt;
+    &lt;label for="tab1" class="tab-label"&gt;Tab 1&lt;/label&gt;
+
+    &lt;input type="radio" id="tab2" name="tab-group"&gt;
+    &lt;label for="tab2" class="tab-label"&gt;Tab 2&lt;/label&gt;
+
+    &lt;input type="radio" id="tab3" name="tab-group"&gt;
+    &lt;label for="tab3" class="tab-label"&gt;Tab 3&lt;/label&gt;
+
+    &lt;div class="tab-content"&gt;
+        &lt;div class="content" id="content1"&gt;
+            &lt;p&gt;This is the content of Tab 1.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="content" id="content2"&gt;
+            &lt;p&gt;This is the content of Tab 2.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="content" id="content3"&gt;
+            &lt;p&gt;This is the content of Tab 3.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+            </div>
+            
+            <!--second content-->
+            <div class="content" id="content2">
+                <pre>
+.tab-label {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    display: inline-block;
+    margin-right: -4px;
+    text-align: center;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+input[type="radio"]:checked + .tab-label {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    font-weight: bold;
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.tab-content .content {
+    display: none;
+}
+
+#tab1:checked ~ .tab-content #content1,
+#tab2:checked ~ .tab-content #content2,
+#tab3:checked ~ .tab-content #content3 {
+    display: block;
+}
+                </pre>
+            </div>
+            
+            <!--third content-->
+            <div class="content" id="content3">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
